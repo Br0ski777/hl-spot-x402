@@ -39,6 +39,42 @@ Do NOT use for perps/futures data -- use hyperliquid_get_perp_markets instead. D
         },
         required: [],
       },
+      outputSchema: {
+          "type": "object",
+          "properties": {
+            "tokens": {
+              "type": "array",
+              "items": {
+                "type": "object",
+                "properties": {
+                  "name": {
+                    "type": "string"
+                  },
+                  "tokenId": {
+                    "type": "string"
+                  },
+                  "index": {
+                    "type": "number"
+                  },
+                  "decimals": {
+                    "type": "number"
+                  },
+                  "weiDecimals": {
+                    "type": "number"
+                  }
+                }
+              }
+            },
+            "count": {
+              "type": "number",
+              "description": "Number of tokens returned"
+            }
+          },
+          "required": [
+            "tokens",
+            "count"
+          ]
+        },
     },
     {
       method: "POST",
@@ -77,6 +113,45 @@ Do NOT use for perps/futures markets -- use hyperliquid_get_perp_markets instead
         },
         required: [],
       },
+      outputSchema: {
+          "type": "object",
+          "properties": {
+            "markets": {
+              "type": "array",
+              "items": {
+                "type": "object",
+                "properties": {
+                  "name": {
+                    "type": "string"
+                  },
+                  "coin": {
+                    "type": "string"
+                  },
+                  "markPx": {
+                    "type": "string"
+                  },
+                  "midPx": {
+                    "type": "string"
+                  },
+                  "dayNtlVlm": {
+                    "type": "string"
+                  },
+                  "change24h": {
+                    "type": "number"
+                  }
+                }
+              }
+            },
+            "count": {
+              "type": "number",
+              "description": "Number of markets"
+            }
+          },
+          "required": [
+            "markets",
+            "count"
+          ]
+        },
     },
     {
       method: "POST",
@@ -112,6 +187,46 @@ Do NOT use for perps positions -- use hyperliquid_get_perp_positions instead. Do
         },
         required: ["address"],
       },
+      outputSchema: {
+          "type": "object",
+          "properties": {
+            "address": {
+              "type": "string",
+              "description": "Wallet address"
+            },
+            "balances": {
+              "type": "array",
+              "items": {
+                "type": "object",
+                "properties": {
+                  "coin": {
+                    "type": "string"
+                  },
+                  "total": {
+                    "type": "string"
+                  },
+                  "hold": {
+                    "type": "string"
+                  },
+                  "available": {
+                    "type": "string"
+                  },
+                  "entryNtl": {
+                    "type": "string"
+                  }
+                }
+              }
+            },
+            "count": {
+              "type": "number"
+            }
+          },
+          "required": [
+            "address",
+            "balances",
+            "count"
+          ]
+        },
     },
   ],
 };
