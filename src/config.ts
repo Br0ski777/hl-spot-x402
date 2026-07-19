@@ -9,7 +9,7 @@ export const API_CONFIG: ApiConfig = {
     {
       method: "POST",
       path: "/api/tokens",
-      price: "$0.002",
+      price: "$0.005",
       description: "List all 454 spot tokens on Hyperliquid with metadata: name, tokenId, index, decimals, wei decimals.",
       toolName: "hyperliquid_list_spot_tokens",
       toolDescription:
@@ -79,7 +79,7 @@ Do NOT use for perps/futures data -- use hyperliquid_get_perp_markets instead. D
     {
       method: "POST",
       path: "/api/markets",
-      price: "$0.002",
+      price: "$0.005",
       description: "Spot market prices, 24h volume, mid price, and trading pair info for all Hyperliquid spot pairs.",
       toolName: "hyperliquid_get_spot_markets",
       toolDescription:
@@ -156,7 +156,7 @@ Do NOT use for perps/futures markets -- use hyperliquid_get_perp_markets instead
     {
       method: "POST",
       path: "/api/balance",
-      price: "$0.002",
+      price: "$0.005",
       description: "Spot token balances for any wallet address on Hyperliquid, including held and available amounts.",
       toolName: "hyperliquid_get_spot_balances",
       toolDescription:
