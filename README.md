@@ -37,9 +37,9 @@ Any x402-aware client ([`@x402/fetch`](https://www.npmjs.com/package/@x402/fetch
 
 | Tool | Method | Path | Price | Description |
 |---|---|---|---|---|
-| `hyperliquid_list_spot_tokens` | POST | `/api/tokens` | $0.002 | List all 454 spot tokens on Hyperliquid with metadata: name, tokenId, index, decimals, wei decimals. |
-| `hyperliquid_get_spot_markets` | POST | `/api/markets` | $0.002 | Spot market prices, 24h volume, mid price, and trading pair info for all Hyperliquid spot pairs. |
-| `hyperliquid_get_spot_balances` | POST | `/api/balance` | $0.002 | Spot token balances for any wallet address on Hyperliquid, including held and available amounts. |
+| `hyperliquid_list_spot_tokens` | POST | `/api/tokens` | $0.005 | List all 454 spot tokens on Hyperliquid with metadata: name, tokenId, index, decimals, wei decimals. |
+| `hyperliquid_get_spot_markets` | POST | `/api/markets` | $0.005 | Spot market prices, 24h volume, mid price, and trading pair info for all Hyperliquid spot pairs. |
+| `hyperliquid_get_spot_balances` | POST | `/api/balance` | $0.005 | Spot token balances for any wallet address on Hyperliquid, including held and available amounts. |
 
 ### `hyperliquid_list_spot_tokens`
 
